@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"country-search-api/internal/service"
+	"github.com/dvsprajapati/country-search-api/internal/service"
 )
 
 type CountryHandler struct {
@@ -15,6 +15,7 @@ func NewCountryHandler(s *service.CountryService) *CountryHandler {
 	return &CountryHandler{service: s}
 }
 
+// search country handler to search country name
 func (h *CountryHandler) SearchCountry(w http.ResponseWriter, r *http.Request) {
 	name := r.URL.Query().Get("name")
 	if name == "" {

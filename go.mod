@@ -1,5 +1,5 @@
-module country-search-api
-
+// module country-search-api
+module github.com/dvsprajapati/country-search-api
 go 1.25.5
 
 require (

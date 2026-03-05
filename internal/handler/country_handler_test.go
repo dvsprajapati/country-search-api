@@ -6,9 +6,10 @@ import (
 	"sync"
 	"testing"
 
-	"country-search-api/internal/cache"
-	"country-search-api/internal/client"
-	"country-search-api/internal/service"
+	"github.com/dvsprajapati/country-search-api/internal/client"
+	"github.com/dvsprajapati/country-search-api/internal/service"
+
+	"github.com/dvsprajapati/country-search-api/internal/cache"
 
 	"github.com/stretchr/testify/assert"
 )

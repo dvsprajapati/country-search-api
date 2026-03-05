@@ -9,10 +9,11 @@ import (
 	"syscall"
 	"time"
 
-	"country-search-api/internal/cache"
-	"country-search-api/internal/client"
-	"country-search-api/internal/handler"
-	"country-search-api/internal/service"
+	"github.com/dvsprajapati/country-search-api/internal/service"
+
+	"github.com/dvsprajapati/country-search-api/internal/cache"
+	"github.com/dvsprajapati/country-search-api/internal/client"
+	"github.com/dvsprajapati/country-search-api/internal/handler"
 )
 
 func main() {

@@ -4,9 +4,11 @@ import (
 	"context"
 	"testing"
 
-	"country-search-api/internal/cache"
-	"country-search-api/internal/mocks"
-	"country-search-api/pkg/model"
+	"github.com/dvsprajapati/country-search-api/app/model"
+	"github.com/dvsprajapati/country-search-api/internal/cache"
+
+	// "country-search-api/internal/mocks"
+	"github.com/dvsprajapati/country-search-api/internal/mocks"
 
 	"github.com/stretchr/testify/assert"
 )

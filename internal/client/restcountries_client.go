@@ -7,24 +7,24 @@ import (
 	"net/http"
 	"time"
 
-	"country-search-api/app/model"
+	"github.com/dvsprajapati/country-search-api/app/model"
 )
 
-type RestCountriesClient struct {
+type restCountriesClient struct {
 	httpClient *http.Client
 	baseURL    string
 }
 
-func NewRestCountriesClient() *RestCountriesClient {
-	return &RestCountriesClient{
+func NewRestCountriesClient() RestCountriesClient {
+	return &restCountriesClient{
 		httpClient: &http.Client{
-			Timeout: 5 * time.Second,
+			Timeout: 10 * time.Second,
 		},
 		baseURL: "https://restcountries.com/v3.1/name/",
 	}
 }
 
-func (c *RestCountriesClient) GetCountry(ctx context.Context, name string) (*model.Country, error) {
+func (c *restCountriesClient) GetCountry(ctx context.Context, name string) (*model.Country, error) {
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, c.baseURL+name, nil)
 	if err != nil {
 		return nil, err

@@ -2,6 +2,7 @@ package cache
 
 import "sync"
 
+// Thread Safe In-memory cache implementation
 type memoryCache struct {
 	data map[string]interface{}
 	mu   sync.RWMutex
@@ -13,6 +14,7 @@ func NewMemoryCache() Cache {
 	}
 }
 
+// retrive value from cache using key
 func (m *memoryCache) Get(key string) (interface{}, bool) {
 	m.mu.RLock()
 	defer m.mu.RUnlock()

@@ -2,17 +2,18 @@ package service
 
 import (
 	"context"
-	"country-search-api/app/model"
-	"country-search-api/internal/cache"
-	"country-search-api/internal/client"
+
+	"github.com/dvsprajapati/country-search-api/app/model"
+	"github.com/dvsprajapati/country-search-api/internal/cache"
+	"github.com/dvsprajapati/country-search-api/internal/client"
 )
 
 type CountryService struct {
 	cache  cache.Cache
-	client *client.RestCountriesClient
+	client client.RestCountriesClient
 }
 
-func NewCountryService(c cache.Cache, cl *client.RestCountriesClient) *CountryService {
+func NewCountryService(c cache.Cache, cl client.RestCountriesClient) *CountryService {
 	return &CountryService{
 		cache:  c,
 		client: cl,
